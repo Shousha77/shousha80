@@ -1,0 +1,1387 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleAhmed Shousha  Fitness Visionarytitle
+    link rel=stylesheet href=httpscdnjs.cloudflare.comajaxlibsfont-awesome6.4.0cssall.min.css
+    link href=httpsfonts.googleapis.comcss2family=Poppinswght@300;400;500;600;700&family=Montserratwght@700;800&display=swap rel=stylesheet
+    style
+        root {
+            --primary #e63946;
+            --secondary #1d3557;
+            --accent #fca311;
+            --dark #14213d;
+            --light #f8f9fa;
+            --gray #8d99ae;
+            --transition all 0.4s ease;
+            --shadow 0 10px 30px rgba(0, 0, 0, 0.1);
+            --radius 12px;
+        }
+
+         {
+            margin 0;
+            padding 0;
+            box-sizing border-box;
+        }
+
+        body {
+            font-family 'Poppins', sans-serif;
+            background-color var(--light);
+            color var(--dark);
+            line-height 1.6;
+            overflow-x hidden;
+            position relative;
+        }
+
+        .container {
+            width 90%;
+            max-width 1200px;
+            margin 0 auto;
+            padding 0 20px;
+        }
+
+         COVID Banner 
+        .covid-banner {
+            background #e63946;
+            color white;
+            text-align center;
+            padding 15px 0;
+            font-size 1.1rem;
+            position sticky;
+            top 0;
+            z-index 1100;
+            box-shadow 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .covid-banner i {
+            margin-right 10px;
+            animation pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform scale(1); }
+            50% { transform scale(1.2); }
+            100% { transform scale(1); }
+        }
+
+         Header Styles 
+        header {
+            padding 1.5rem 0;
+            position fixed;
+            top 40px;
+            left 0;
+            width 100%;
+            z-index 1000;
+            background-color rgba(255, 255, 255, 0.95);
+            box-shadow var(--shadow);
+            transition var(--transition);
+        }
+
+        .nav-container {
+            display flex;
+            justify-content space-between;
+            align-items center;
+        }
+
+        .logo {
+            font-family 'Montserrat', sans-serif;
+            font-size 2rem;
+            font-weight 800;
+            color var(--primary);
+            text-decoration none;
+            display flex;
+            align-items center;
+        }
+
+        .logo span {
+            color var(--secondary);
+        }
+
+        .nav-links {
+            display flex;
+            list-style none;
+        }
+
+        .nav-links li {
+            margin-left 2rem;
+        }
+
+        .nav-links a {
+            text-decoration none;
+            color var(--dark);
+            font-weight 500;
+            font-size 1.1rem;
+            position relative;
+            transition var(--transition);
+        }
+
+        .nav-links aafter {
+            content '';
+            position absolute;
+            bottom -5px;
+            left 0;
+            width 0;
+            height 3px;
+            background var(--primary);
+            transition var(--transition);
+        }
+
+        .nav-links ahoverafter {
+            width 100%;
+        }
+
+        .nav-links ahover {
+            color var(--primary);
+        }
+
+        .hamburger {
+            display none;
+            cursor pointer;
+            background none;
+            border none;
+            font-size 1.8rem;
+            color var(--dark);
+        }
+
+         Hero Section 
+        .hero {
+            height 100vh;
+            display flex;
+            align-items center;
+            padding-top 120px;
+            background linear-gradient(135deg, rgba(29, 53, 87, 0.1) 0%, rgba(230, 57, 70, 0.05) 100%);
+            position relative;
+            overflow hidden;
+        }
+
+        .herobefore {
+            content '';
+            position absolute;
+            top -50%;
+            right -50%;
+            width 800px;
+            height 800px;
+            border-radius 50%;
+            background radial-gradient(circle, rgba(230, 57, 70, 0.1) 0%, transparent 70%);
+            z-index -1;
+        }
+
+        .hero-content {
+            display flex;
+            align-items center;
+            justify-content space-between;
+            gap 3rem;
+        }
+
+        .hero-text {
+            flex 1;
+            animation fadeInUp 1s ease;
+        }
+
+        .hero-image {
+            flex 1;
+            display flex;
+            justify-content center;
+            animation fadeIn 1.5s ease;
+        }
+
+        .hero-image img {
+            max-width 100%;
+            border-radius var(--radius);
+            box-shadow var(--shadow);
+            width 100%;
+            height auto;
+            object-fit cover;
+        }
+
+        .hero h1 {
+            font-size 3.5rem;
+            font-weight 800;
+            line-height 1.2;
+            margin-bottom 1.5rem;
+        }
+
+        .hero h1 span {
+            color var(--primary);
+        }
+
+        .hero p {
+            font-size 1.2rem;
+            margin-bottom 2rem;
+            color var(--secondary);
+            max-width 600px;
+        }
+
+        .btn {
+            display inline-block;
+            padding 14px 32px;
+            background var(--primary);
+            color white;
+            border-radius 50px;
+            text-decoration none;
+            font-weight 600;
+            transition var(--transition);
+            border none;
+            cursor pointer;
+            font-size 1rem;
+            box-shadow 0 4px 15px rgba(230, 57, 70, 0.3);
+        }
+
+        .btnhover {
+            background #c1121f;
+            transform translateY(-3px);
+            box-shadow 0 7px 20px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-outline {
+            background transparent;
+            border 2px solid var(--primary);
+            color var(--primary);
+            margin-left 15px;
+        }
+
+        .btn-outlinehover {
+            background var(--primary);
+            color white;
+        }
+
+        .social-icons {
+            display flex;
+            gap 1.5rem;
+            margin-top 2rem;
+        }
+
+        .social-icons a {
+            display flex;
+            align-items center;
+            justify-content center;
+            width 50px;
+            height 50px;
+            border-radius 50%;
+            background rgba(230, 57, 70, 0.1);
+            color var(--primary);
+            font-size 1.4rem;
+            transition var(--transition);
+        }
+
+        .social-icons ahover {
+            background var(--primary);
+            color white;
+            transform translateY(-5px);
+        }
+
+         Sections 
+        section {
+            padding 100px 0;
+        }
+
+        .section-title {
+            text-align center;
+            margin-bottom 60px;
+        }
+
+        .section-title h2 {
+            font-size 2.5rem;
+            font-weight 700;
+            margin-bottom 15px;
+            position relative;
+            display inline-block;
+            color var(--secondary);
+        }
+
+        .section-title h2after {
+            content '';
+            position absolute;
+            bottom -10px;
+            left 50%;
+            transform translateX(-50%);
+            width 80px;
+            height 4px;
+            background var(--primary);
+            border-radius 2px;
+        }
+
+        .section-title p {
+            color var(--gray);
+            max-width 700px;
+            margin 0 auto;
+            font-size 1.1rem;
+        }
+
+         About Section 
+        .about-content {
+            display flex;
+            align-items center;
+            gap 4rem;
+        }
+
+        .about-text {
+            flex 1;
+        }
+
+        .about-text h3 {
+            font-size 2rem;
+            margin-bottom 1.5rem;
+            color var(--secondary);
+        }
+
+        .about-text p {
+            margin-bottom 1.5rem;
+            font-size 1.1rem;
+        }
+
+        .timeline {
+            position relative;
+            max-width 800px;
+            margin 3rem auto 0;
+        }
+
+        .timelinebefore {
+            content '';
+            position absolute;
+            top 0;
+            left 50%;
+            transform translateX(-50%);
+            width 4px;
+            height 100%;
+            background var(--primary);
+        }
+
+        .timeline-item {
+            position relative;
+            margin-bottom 3rem;
+            width calc(50% - 40px);
+        }
+
+        .timeline-itemnth-child(odd) {
+            left 0;
+        }
+
+        .timeline-itemnth-child(even) {
+            left calc(50% + 40px);
+        }
+
+        .timeline-content {
+            background white;
+            padding 2rem;
+            border-radius var(--radius);
+            box-shadow var(--shadow);
+            position relative;
+        }
+
+        .timeline-contentbefore {
+            content '';
+            position absolute;
+            top 20px;
+            width 0;
+            height 0;
+            border-style solid;
+        }
+
+        .timeline-itemnth-child(odd) .timeline-contentbefore {
+            right -15px;
+            border-width 10px 0 10px 15px;
+            border-color transparent transparent transparent white;
+        }
+
+        .timeline-itemnth-child(even) .timeline-contentbefore {
+            left -15px;
+            border-width 10px 15px 10px 0;
+            border-color transparent white transparent transparent;
+        }
+
+        .timeline-year {
+            position absolute;
+            top 10px;
+            background var(--primary);
+            color white;
+            padding 5px 15px;
+            border-radius 20px;
+            font-weight 600;
+        }
+
+        .timeline-itemnth-child(odd) .timeline-year {
+            right -100px;
+        }
+
+        .timeline-itemnth-child(even) .timeline-year {
+            left -100px;
+        }
+
+         FCC Group Section 
+        .fcc-group {
+            background linear-gradient(135deg, rgba(29, 53, 87, 0.03) 0%, rgba(230, 57, 70, 0.02) 100%);
+        }
+
+        .fcc-content {
+            display grid;
+            grid-template-columns 1fr 1fr;
+            gap 4rem;
+            align-items center;
+        }
+
+        .fcc-info {
+            background white;
+            padding 2.5rem;
+            border-radius var(--radius);
+            box-shadow var(--shadow);
+        }
+
+        .fcc-details {
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(250px, 1fr));
+            gap 1.5rem;
+            margin-top 2rem;
+        }
+
+        .detail-card {
+            background rgba(67, 97, 238, 0.05);
+            padding 1.5rem;
+            border-radius var(--radius);
+            border-left 3px solid var(--primary);
+        }
+
+        .detail-card h4 {
+            font-size 1.2rem;
+            margin-bottom 0.5rem;
+            color var(--secondary);
+        }
+
+        .fcc-services {
+            margin-top 2rem;
+        }
+
+        .service-list {
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(200px, 1fr));
+            gap 1rem;
+            margin-top 1rem;
+        }
+
+        .service-item {
+            display flex;
+            align-items center;
+            gap 10px;
+            padding 10px;
+            background rgba(67, 97, 238, 0.05);
+            border-radius 8px;
+        }
+
+        .service-item i {
+            color var(--primary);
+        }
+
+         Bahrain Legacy Section 
+        .closure-notice {
+            background white;
+            border-radius var(--radius);
+            padding 2.5rem;
+            box-shadow var(--shadow);
+            margin-bottom 3rem;
+            border-left 5px solid var(--primary);
+        }
+
+        .closure-notice h3 {
+            font-size 1.8rem;
+            margin-bottom 1rem;
+            color var(--primary);
+        }
+
+        .gym-cards {
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(300px, 1fr));
+            gap 2rem;
+        }
+
+        .gym-card {
+            border-radius var(--radius);
+            overflow hidden;
+            position relative;
+            box-shadow var(--shadow);
+            background white;
+            transition var(--transition);
+        }
+
+        .gym-cardhover {
+            transform translateY(-10px);
+        }
+
+        .gym-img {
+            width 100%;
+            height 250px;
+            object-fit cover;
+            transition var(--transition);
+        }
+
+        .gym-content {
+            padding 2rem;
+            position relative;
+        }
+
+        .closed-badge {
+            position absolute;
+            top -20px;
+            right 20px;
+            background var(--primary);
+            color white;
+            padding 8px 20px;
+            border-radius 30px;
+            font-weight 600;
+            box-shadow 0 5px 15px rgba(230, 57, 70, 0.3);
+        }
+
+        .gym-card h3 {
+            font-size 1.8rem;
+            margin-bottom 1rem;
+            color var(--secondary);
+        }
+
+        .gym-features {
+            list-style none;
+            margin 1.5rem 0;
+        }
+
+        .gym-features li {
+            padding 8px 0;
+            border-bottom 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .gym-features lilast-child {
+            border-bottom none;
+        }
+
+        .gym-features li i {
+            color var(--primary);
+            margin-right 10px;
+        }
+
+         Egypt Plans Section 
+        .egypt-plans {
+            background linear-gradient(135deg, rgba(252, 163, 17, 0.05) 0%, rgba(20, 33, 61, 0.03) 100%);
+            border-radius var(--radius);
+            padding 4rem;
+            text-align center;
+            box-shadow var(--shadow);
+        }
+
+        .countdown {
+            display flex;
+            justify-content center;
+            gap 1.5rem;
+            margin 2rem 0;
+        }
+
+        .countdown-item {
+            background white;
+            border-radius var(--radius);
+            padding 1.5rem;
+            min-width 100px;
+            box-shadow var(--shadow);
+        }
+
+        .countdown-number {
+            font-size 2.5rem;
+            font-weight 700;
+            color var(--primary);
+            margin-bottom 0.5rem;
+        }
+
+        .countdown-label {
+            font-size 1rem;
+            color var(--secondary);
+        }
+
+        .future-features {
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(250px, 1fr));
+            gap 1.5rem;
+            margin-top 3rem;
+        }
+
+        .feature-card {
+            background rgba(252, 163, 17, 0.1);
+            padding 1.5rem;
+            border-radius var(--radius);
+            border-left 3px solid var(--accent);
+        }
+
+        .feature-card h4 {
+            font-size 1.3rem;
+            margin-bottom 0.5rem;
+            color var(--secondary);
+        }
+
+         Contact Section 
+        .contact-container {
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(300px, 1fr));
+            gap 3rem;
+        }
+
+        .contact-info {
+            display flex;
+            flex-direction column;
+            gap 2rem;
+        }
+
+        .contact-item {
+            display flex;
+            gap 1.5rem;
+            align-items flex-start;
+        }
+
+        .contact-icon {
+            width 60px;
+            height 60px;
+            border-radius 50%;
+            background rgba(230, 57, 70, 0.1);
+            display flex;
+            align-items center;
+            justify-content center;
+            font-size 1.5rem;
+            color var(--primary);
+            flex-shrink 0;
+        }
+
+        .contact-details h3 {
+            font-size 1.3rem;
+            margin-bottom 0.5rem;
+            color var(--secondary);
+        }
+
+        .contact-form {
+            background white;
+            padding 2.5rem;
+            border-radius var(--radius);
+            box-shadow var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom 1.5rem;
+        }
+
+        .form-group label {
+            display block;
+            margin-bottom 0.5rem;
+            font-weight 500;
+            color var(--secondary);
+        }
+
+        .form-control {
+            width 100%;
+            padding 14px;
+            border 1px solid #ddd;
+            border-radius 8px;
+            font-family 'Poppins', sans-serif;
+            font-size 1rem;
+            transition var(--transition);
+        }
+
+        .form-controlfocus {
+            border-color var(--primary);
+            outline none;
+            box-shadow 0 0 0 3px rgba(230, 57, 70, 0.2);
+        }
+
+        textarea.form-control {
+            min-height 150px;
+            resize vertical;
+        }
+
+         Footer 
+        footer {
+            background var(--secondary);
+            color white;
+            padding 60px 0 30px;
+        }
+
+        .footer-content {
+            display flex;
+            flex-direction column;
+            align-items center;
+            text-align center;
+        }
+
+        .footer-logo {
+            font-family 'Montserrat', sans-serif;
+            font-size 2.5rem;
+            font-weight 800;
+            color white;
+            margin-bottom 1.5rem;
+        }
+
+        .footer-logo span {
+            color var(--primary);
+        }
+
+        .footer-social {
+            display flex;
+            gap 1.5rem;
+            margin-bottom 2rem;
+        }
+
+        .footer-social a {
+            display flex;
+            align-items center;
+            justify-content center;
+            width 45px;
+            height 45px;
+            border-radius 50%;
+            background rgba(255, 255, 255, 0.1);
+            color white;
+            font-size 1.2rem;
+            transition var(--transition);
+        }
+
+        .footer-social ahover {
+            background var(--primary);
+            transform translateY(-5px);
+        }
+
+        .copyright {
+            padding-top 30px;
+            border-top 1px solid rgba(255, 255, 255, 0.1);
+            width 100%;
+            color rgba(255, 255, 255, 0.7);
+        }
+
+         Animations 
+        @keyframes fadeIn {
+            from {
+                opacity 0;
+            }
+            to {
+                opacity 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity 0;
+                transform translateY(30px);
+            }
+            to {
+                opacity 1;
+                transform translateY(0);
+            }
+        }
+
+         Back to Top Button 
+        .back-to-top {
+            position fixed;
+            bottom 30px;
+            right 30px;
+            width 50px;
+            height 50px;
+            border-radius 50%;
+            background var(--primary);
+            color white;
+            display flex;
+            align-items center;
+            justify-content center;
+            font-size 1.2rem;
+            cursor pointer;
+            box-shadow 0 5px 15px rgba(0, 0, 0, 0.3);
+            border none;
+            z-index 100;
+            opacity 0;
+            visibility hidden;
+            transition var(--transition);
+        }
+
+        .back-to-top.show {
+            opacity 1;
+            visibility visible;
+        }
+
+        .back-to-tophover {
+            background #c1121f;
+            transform translateY(-3px);
+        }
+
+         Timeline Fixes 
+        @media (max-width 992px) {
+            .timelinebefore {
+                left 35px;
+            }
+
+            .timeline-item .timeline-year {
+                left 35px;
+                transform translateX(-50%);
+                top 0;
+                right auto;
+            }
+        }
+
+         Responsive Design 
+        @media (max-width 992px) {
+            .hero-content {
+                flex-direction column;
+                text-align center;
+            }
+            
+            .hero-text {
+                display flex;
+                flex-direction column;
+                align-items center;
+            }
+            
+            .hero h1 {
+                font-size 2.8rem;
+            }
+            
+            .about-content {
+                flex-direction column;
+            }
+            
+            .timelinebefore {
+                left 30px;
+            }
+            
+            .timeline-item {
+                width 100%;
+                left 0 !important;
+                padding-left 70px;
+            }
+            
+            .timeline-itemnth-child(odd) .timeline-year,
+            .timeline-itemnth-child(even) .timeline-year {
+                left 0;
+                right auto;
+                top 0;
+            }
+            
+            .timeline-contentbefore {
+                left -15px !important;
+                right auto !important;
+                border-width 10px 15px 10px 0 !important;
+                border-color transparent white transparent transparent !important;
+            }
+            
+            .fcc-content {
+                grid-template-columns 1fr;
+            }
+            
+            .countdown {
+                flex-wrap wrap;
+            }
+        }
+
+        @media (max-width 768px) {
+            .nav-links {
+                position fixed;
+                top 0;
+                right -100%;
+                height 100vh;
+                width 70%;
+                background white;
+                flex-direction column;
+                align-items center;
+                justify-content center;
+                transition var(--transition);
+                z-index 999;
+                box-shadow -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                right 0;
+            }
+            
+            .nav-links li {
+                margin 1.5rem 0;
+            }
+            
+            .hamburger {
+                display block;
+                z-index 1001;
+            }
+            
+            .hero h1 {
+                font-size 2.5rem;
+            }
+            
+            .btn-container {
+                display flex;
+                flex-direction column;
+                gap 1rem;
+            }
+            
+            .btn-outline {
+                margin-left 0;
+            }
+        }
+
+        @media (max-width 576px) {
+            .hero h1 {
+                font-size 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size 2rem;
+            }
+            
+            .egypt-plans {
+                padding 2rem;
+            }
+        }
+    style
+head
+body
+    !-- COVID Banner --
+    div class=covid-banner
+        i class=fas fa-exclamation-trianglei
+        All Bahrain gyms permanently closed in June 2020 due to COVID-19. Ahmed Shousha is planning new gyms in Egypt.
+    div
+
+    !-- Header & Navigation --
+    header
+        div class=container nav-container
+            a href=# class=logoSHOUSHAspanFITNESSspana
+            ul class=nav-links
+                lia href=#homeHomeali
+                lia href=#aboutAhmed Shoushaali
+                lia href=#fcc-groupFCC Groupali
+                lia href=#bahrainBahrain Legacyali
+                lia href=#egyptEgypt Plansali
+                lia href=#contactContactali
+            ul
+            button class=hamburger id=hamburger
+                i class=fas fa-barsi
+            button
+        div
+    header
+
+    !-- Hero Section --
+    section class=hero id=home
+        div class=container hero-content
+            div class=hero-text
+                h1Ahmed Shousha spanFitness Visionaryspanh1
+                pFounder of FCC Group and pioneer of Bahrain's premium fitness industry. Transforming business landscapes since 2005 through innovation and commitment to excellence.p
+                div class=btn-container
+                    a href=#fcc-group class=btnDiscover FCC Groupa
+                    a href=#bahrain class=btn btn-outlineBahrain Legacya
+                div
+                div class=social-icons
+                    a href=#i class=fab fa-instagramia
+                    a href=#i class=fab fa-facebook-fia
+                    a href=#i class=fab fa-youtubeia
+                    a href=#i class=fab fa-tiktokia
+                div
+            div
+            div class=hero-image
+                img src=httpsimages.unsplash.comphoto-1534438327276-14e5300c3a48ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80 alt=Ahmed Shousha's Fitness Vision
+            div
+        div
+    section
+
+    !-- About Section --
+    section id=about
+        div class=container
+            div class=section-title
+                h2About Ahmed Shoushah2
+                pThe entrepreneurial journey of a fitness pioneerp
+            div
+            div class=about-content
+                div class=about-text
+                    h3From Construction to Fitness Empireh3
+                    pAhmed Shousha began his entrepreneurial journey in Bahrain, founding FCC Group in 2005 as a construction company. His vision expanded in 2009 when he recognized Bahrain's growing health and wellness market, leading to a strategic pivot into the fitness industry.p
+                    pWith a passion for transforming lives through fitness, Ahmed opened his first gym in 2010 and grew FCC Group into a premier fitness destination with multiple locations across Bahrain. His leadership created hundreds of jobs and established new standards for fitness in the region.p
+                    
+                    h3Entrepreneurial Timelineh3
+                    div class=timeline
+                        div class=timeline-item
+                            div class=timeline-year2005div
+                            div class=timeline-content
+                                h4FCC Group Foundedh4
+                                pEstablished FCC Group with initial focus on construction and building projects.p
+                            div
+                        div
+                        div class=timeline-item
+                            div class=timeline-year2010div
+                            div class=timeline-content
+                                h4First Gym Launchh4
+                                pOpened Shousha Gym in Hidd, Bahrain with 100+ machines.p
+                            div
+                        div
+                        div class=timeline-item
+                            div class=timeline-year2013div
+                            div class=timeline-content
+                                h4Sphinx Health Clubh4
+                                pLaunched men's section of premium fitness facility.p
+                            div
+                        div
+                        div class=timeline-item
+                            div class=timeline-year2014div
+                            div class=timeline-content
+                                h4Expansionh4
+                                pAdded ladies section, spa, and supplement store to Sphinx Health Club.p
+                            div
+                        div
+                        div class=timeline-item
+                            div class=timeline-year2020div
+                            div class=timeline-content
+                                h4COVID-19 Closureh4
+                                pAll Bahrain gyms permanently closed in June due to pandemic restrictions.p
+                            div
+                        div
+                    div
+                div
+            div
+        div
+    section
+
+    !-- FCC Group Section --
+    section id=fcc-group class=fcc-group
+        div class=container
+            div class=section-title
+                h2FCC Grouph2
+                pThe corporate entity behind Bahrain's fitness revolutionp
+            div
+            
+            div class=fcc-content
+                div class=fcc-info
+                    h3Building Fitness Excellenceh3
+                    pFCC Group, founded by Ahmed Shousha in 2005, evolved from a construction company to Bahrain's premier fitness destination. At its peak, FCC Group operated multiple fitness facilities with annual sales of $100,000-$500,000 USD and employed 6-10 dedicated staff members.p
+                    
+                    div class=fcc-details
+                        div class=detail-card
+                            h4Business Overviewh4
+                            pBody Building Fitness Club for men and women offering personal training, sauna, steam, and massage services.p
+                        div
+                        div class=detail-card
+                            h4Financialsh4
+                            pAnnual sales volume USD 100,000-500,000 at peak operations.p
+                        div
+                        div class=detail-card
+                            h4Headquartersh4
+                            pP.O. Box 10595, Manama, Bahrain.p
+                        div
+                        div class=detail-card
+                            h4Membership Optionsh4
+                            pMonthly, quarterly and yearly plans available.p
+                        div
+                    div
+                    
+                    div class=fcc-services
+                        h4Premium Services Offeredh4
+                        div class=service-list
+                            div class=service-item
+                                i class=fas fa-dumbbelli
+                                spanPersonal Trainingspan
+                            div
+                            div class=service-item
+                                i class=fas fa-spai
+                                spanSauna & Steamspan
+                            div
+                            div class=service-item
+                                i class=fas fa-wateri
+                                spanMassage Therapyspan
+                            div
+                            div class=service-item
+                                i class=fas fa-usersi
+                                spanGroup Classesspan
+                            div
+                            div class=service-item
+                                i class=fas fa-storei
+                                spanSupplement Storespan
+                            div
+                        div
+                    div
+                div
+                
+                div
+                    h3Operational Excellenceh3
+                    pFCC Group established strict quality standards across all facilitiesp
+                    ul class=gym-features
+                        lii class=fas fa-check-circlei All equipment sanitized after each useli
+                        lii class=fas fa-check-circlei Certified trainers leading group classesli
+                        lii class=fas fa-check-circlei Mandatory health declarations for membersli
+                        lii class=fas fa-check-circlei Professional locker facilities with securityli
+                        lii class=fas fa-check-circlei Flexible membership freezing optionsli
+                    ul
+                    
+                    div class=closure-notice style=margin-top 2rem;
+                        h3COVID-19 Impacth3
+                        pAfter 15 years of successful operation, FCC Group permanently closed all Bahrain facilities in June 2020 due to government-mandated lockdowns and the devastating financial impact of the COVID-19 pandemic on the fitness industry.p
+                    div
+                div
+            div
+        div
+    section
+
+    !-- Bahrain Legacy Section --
+    section id=bahrain
+        div class=container
+            div class=section-title
+                h2Bahrain Fitness Legacyh2
+                pPioneering gyms that transformed Bahrain's fitness landscape (2010-2020)p
+            div
+            
+            div class=gym-cards
+                div class=gym-card
+                    img src=httpsimages.unsplash.comphoto-1540497077202-7c8a3999166fixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80 alt=Shousha Gym class=gym-img
+                    div class=gym-content
+                        div class=closed-badgeClosed June 2020div
+                        h3Shousha Gymh3
+                        pThe original fitness destination that started it all in Hidd, Bahrain. Established around 2010, this gym set new standards for fitness in the region.p
+                        ul class=gym-features
+                            lii class=fas fa-dumbbelli 100+ machinesli
+                            lii class=fas fa-trophyi Host to international championsli
+                            lii class=fas fa-user-tiei Personal training programsli
+                            lii class=fas fa-apple-alti Nutritional guidanceli
+                        ul
+                    div
+                div
+                div class=gym-card
+                    img src=httpsimages.unsplash.comphoto-1571019613454-1cb2f99b2d8bixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80 alt=Sphinx Health Club class=gym-img
+                    div class=gym-content
+                        div class=closed-badgeClosed June 2020div
+                        h3Sphinx Health Clubh3
+                        pThe premium fitness destination opened in 2013 with separate sections for men and women, offering comprehensive fitness solutions.p
+                        ul class=gym-features
+                            lii class=fas fa-spai Premium spa facilitiesli
+                            lii class=fas fa-femalei Dedicated ladies sectionli
+                            lii class=fas fa-storei Supplement shop (opened 2014)li
+                            lii class=fas fa-usersi Group exercise classesli
+                        ul
+                    div
+                div
+            div
+        div
+    section
+
+    !-- Egypt Plans Section --
+    section id=egypt
+        div class=container
+            div class=section-title
+                h2Future Plans in Egypth2
+                pNew fitness ventures coming to Cairop
+            div
+            
+            div class=egypt-plans
+                h3Building the Next Generation of Fitness Centersh3
+                pAhmed Shousha is currently developing plans for new premium fitness facilities in Cairo, Egypt. These state-of-the-art gyms will incorporate lessons learned from the pandemic and feature innovative approaches to health and wellness.p
+                
+                div class=countdown
+                    div class=countdown-item
+                        div class=countdown-number id=years1-2div
+                        div class=countdown-labelYearsdiv
+                    div
+                    div class=countdown-item
+                        div class=countdown-numberNewdiv
+                        div class=countdown-labelLocationsdiv
+                    div
+                    div class=countdown-item
+                        div class=countdown-numberPremiumdiv
+                        div class=countdown-labelFacilitiesdiv
+                    div
+                div
+                
+                pAnticipated opening strong2024-2025strongp
+                pSign up for updates to be the first to know when registration opens!p
+                
+                div class=future-features
+                    div class=feature-card
+                        h4Hybrid Trainingh4
+                        pCombining in-person sessions with virtual coaching optionsp
+                    div
+                    div class=feature-card
+                        h4Wellness Focush4
+                        pIntegrating nutrition, mental health, and recovery servicesp
+                    div
+                    div class=feature-card
+                        h4Pandemic-Proof Designh4
+                        pAdvanced air filtration and spacious layoutsp
+                    div
+                    div class=feature-card
+                        h4Community Buildingh4
+                        pCreating fitness communities that support each otherp
+                    div
+                div
+                
+                a href=#contact class=btn style=margin-top 2rem;Get Updates on Egypt Venturesa
+            div
+        div
+    section
+
+    !-- Contact Section --
+    section id=contact
+        div class=container
+            div class=section-title
+                h2Contact Ush2
+                pConnect with Ahmed Shousha's fitness journeyp
+            div
+            div class=contact-container
+                div class=contact-info
+                    div class=contact-item
+                        div class=contact-icon
+                            i class=fas fa-envelopei
+                        div
+                        div class=contact-details
+                            h3Emailh3
+                            pshoushajunior2@gmail.comp
+                        div
+                    div
+                    div class=contact-item
+                        div class=contact-icon
+                            i class=fas fa-map-marker-alti
+                        div
+                        div class=contact-details
+                            h3Future Egypt Locationh3
+                            pCairo, Egypt (Planned)p
+                        div
+                    div
+                    div class=contact-item
+                        div class=contact-icon
+                            i class=fas fa-historyi
+                        div
+                        div class=contact-details
+                            h3Bahrain Legacyh3
+                            pAll Bahrain locations closed June 2020p
+                        div
+                    div
+                    div class=contact-item
+                        div class=contact-icon
+                            i class=fas fa-info-circlei
+                        div
+                        div class=contact-details
+                            h3FCC Group Historyh3
+                            p2005-2020 Operated in Bahrainp
+                        div
+                    div
+                div
+                div class=contact-form
+                    form id=contactForm
+                        div class=form-group
+                            label for=nameFull Namelabel
+                            input type=text id=name class=form-control required
+                        div
+                        div class=form-group
+                            label for=emailEmail Addresslabel
+                            input type=email id=email class=form-control required
+                        div
+                        div class=form-group
+                            label for=subjectSubjectlabel
+                            input type=text id=subject class=form-control required
+                        div
+                        div class=form-group
+                            label for=messageMessagelabel
+                            textarea id=message class=form-control requiredtextarea
+                        div
+                        button type=submit class=btnSend Messagebutton
+                    form
+                div
+            div
+        div
+    section
+
+    !-- Footer --
+    footer
+        div class=container
+            div class=footer-content
+                a href=# class=footer-logoSHOUSHAspanFITNESSspana
+                div class=footer-social
+                    a href=#i class=fab fa-instagramia
+                    a href=#i class=fab fa-facebook-fia
+                    a href=#i class=fab fa-youtubeia
+                    a href=#i class=fab fa-tiktokia
+                div
+                p© 2023 Shousha Fitness. All rights reserved.p
+                div class=copyright
+                    pContact us at shoushajunior2@gmail.comp
+                div
+            div
+        div
+    footer
+
+    !-- Back to Top Button --
+    button id=backToTop class=back-to-top
+        i class=fas fa-arrow-upi
+    button
+
+    script
+         Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () = {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active')  
+                'i class=fas fa-timesi'  'i class=fas fa-barsi';
+        });
+
+         Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link = {
+            link.addEventListener('click', () = {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = 'i class=fas fa-barsi';
+            });
+        });
+
+         Header scroll effect
+        window.addEventListener('scroll', () = {
+            const header = document.querySelector('header');
+            if (window.scrollY  100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'var(--shadow)';
+            }
+        });
+
+         Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^=#]').forEach(anchor = {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top target.offsetTop - 80,
+                        behavior 'smooth'
+                    });
+                }
+            });
+        });
+
+         Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+             Simple validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                alert('Thank you for your message! We will contact you soon at shoushajunior2@gmail.com');
+                contactForm.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+         Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () = {
+            if (window.scrollY  300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () = {
+            window.scrollTo({
+                top 0,
+                behavior 'smooth'
+            });
+        });
+    script
+body
+html
